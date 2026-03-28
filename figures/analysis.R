@@ -6,7 +6,6 @@ popper_data <- data.frame(
   SD   = c(0.26, 0.16)
 )
 
-
 # plotting and formatting
 ggplot(popper_data, aes(x = Type, y = Mean, fill = Type)) +
   geom_col(color = "black", linewidth = 0.4) +   # bars
@@ -14,7 +13,6 @@ ggplot(popper_data, aes(x = Type, y = Mean, fill = Type)) +
   scale_fill_manual(values = c("Happy" = "#4472C4", "Sad" = "#C0504D")) +
   scale_y_continuous(limits = c(0, 2.2), breaks = seq(0, 2, 0.5)) +
   labs(
-    title = "Popper Type vs. Max Height",
     x = "Popper Type",
     y = "Max Height (m)",
     caption = "Error bars = ±1 SD (n = 5 per group)"
